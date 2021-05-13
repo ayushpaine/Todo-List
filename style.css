@@ -287,9 +287,13 @@ select {
         position: relative;
         bottom: -7.5px;
     }
+    .helptext {
+        position: relative;
+        top: -1vh;
+    }
     .big-container {
         position: relative;
-        top: -16vh;
+        top: -19vh;
         width: fit-content;
     }
     .fa-question {
