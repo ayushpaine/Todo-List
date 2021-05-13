@@ -1,0 +1,338 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@600&display=swap');
+html,
+body {
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+    box-sizing: border-box;
+    height: 100vh;
+}
+
+body {
+    font-family: 'Nunito', 'sans-serif';
+    background-color: rgb(190, 156, 253);
+}
+
+#heading {
+    animation: fillsvg 1s forwards 2s;
+    position: relative;
+}
+
+.svg-cont {
+    padding: 5%;
+    padding-top: 0;
+    position: relative;
+    top: 10vh;
+    z-index: -1;
+}
+
+@keyframes fillsvg {
+    from {
+        fill: transparent;
+    }
+    to {
+        fill: rgb(255, 74, 165);
+    }
+}
+
+.svg-cont {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    z-index: -1;
+}
+
+.form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: 6vh;
+}
+
+@keyframes formappear {
+    to {
+        opacity: 1;
+        width: 100%;
+    }
+}
+
+.formwrapper {
+    opacity: 0;
+    width: 0%;
+    position: relative;
+    top: -8vh;
+    animation: formappear 1s cubic-bezier(.7, -0.45, .26, 2.31) forwards 2s;
+    z-index: 1000;
+}
+
+.textbox {
+    border: none;
+    width: 40%;
+    height: 6vh;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.16), 0 0.5px 60px rgba(0, 0, 0, 0.23);
+    padding-left: 5px;
+    font-size: 4vh;
+    letter-spacing: -0.5px;
+    font-weight: 600;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Nunito', sans-serif;
+}
+
+.button {
+    border: none;
+    background-color: white;
+    position: relative;
+    left: 1em;
+    width: 6vh;
+    height: 6vh;
+    cursor: pointer;
+    border-radius: 22px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.16), 0 0.5px 60px rgba(0, 0, 0, 0.23);
+    transition: all 0s ease;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 8vh;
+}
+
+.big-container {
+    display: grid;
+    grid-template-columns: auto;
+    position: relative;
+    top: -15vh;
+}
+
+.todolist {
+    list-style: none;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    left: -5vh;
+    top: -13vh;
+    color: rgb(73, 73, 73);
+}
+
+.todo {
+    background-color: whitesmoke;
+    margin-top: 8px;
+    border-radius: 5px;
+    width: 26vw;
+    font-size: 1.2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 6px;
+    transition: all 0.15s ease-in-out;
+    font-family: 'Nunito', sans-serif;
+}
+
+.todo li {
+    flex-grow: 1;
+}
+
+.complete-btn,
+.delete-btn {
+    background-color: rgb(201, 201, 201);
+    border: none;
+    height: 3vw;
+    width: 3vw;
+    cursor: pointer;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.complete-btn {
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    background-color: rgb(132, 255, 132);
+}
+
+.delete-btn {
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    background-color: rgb(255, 130, 130);
+}
+
+.fa-trash,
+.fa-check {
+    pointer-events: none;
+}
+
+.completed {
+    text-decoration: line-through;
+    opacity: 0.4;
+    transition: all 0.2s cubic-bezier(0.7, 1.35, 0.3, 1);
+}
+
+.shrink {
+    transform: scale(0);
+    opacity: 0;
+    transition: all 0.60s cubic-bezier(0.35, -1.35, 0.3, 1.25);
+}
+
+.circlecont {
+    display: flex;
+    z-index: -100;
+    justify-content: flex-end;
+    opacity: 0;
+    animation: helpanim 0.4s cubic-bezier(.62, .49, .61, 1.45) forwards 2.85s;
+}
+
+@keyframes helpanim {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.help {
+    background-color: rgb(237, 102, 255);
+    border-radius: 6px;
+    width: 27vw;
+    padding: 3vh;
+    padding-right: 2vh;
+    margin-top: 2.5vh;
+    margin-right: 2.5vh;
+    clip-path: circle(22px at 50% 3.75vh);
+    transition: all 0.28s ease-in-out;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    position: relative;
+    z-index: 1000;
+}
+
+.icon-wrap {
+    margin-right: 50%;
+    margin-left: auto;
+    transform: translate(25%, 20%);
+    float: right;
+}
+
+.help:hover {
+    clip-path: circle(75%);
+    background-color: rgb(195, 0, 255);
+}
+
+.circletext {
+    font-size: 1em;
+    line-height: 22px;
+}
+
+.fa-question {
+    position: relative;
+    top: -1vh;
+    font-size: 18px;
+}
+
+select {
+    appearance: none;
+    outline: none;
+    border: none;
+    margin: 1.5vw;
+    width: fit-content;
+    padding-left: 0.5vw;
+    padding-right: 0.5vw;
+    height: 6vh;
+    border-radius: 6px;
+    font-family: 'Nunito', sans-serif;
+    color: rgb(58, 58, 58);
+    cursor: pointer;
+}
+
+.choose {
+    margin: 0.4rem;
+    opacity: 0;
+    position: relative;
+    overflow: hidden;
+    animation: optionanim 0.4s ease-in-out forwards 2.9s;
+}
+
+@keyframes optionanim {
+    to {
+        opacity: 1;
+    }
+}
+
+@media only screen and (max-width: 430px) {
+    .circlecont {
+        justify-content: flex-end;
+        padding-left: 2vh;
+    }
+    .svg-cont {
+        position: relative;
+        top: -10%;
+        width: 90vw;
+    }
+    .help {
+        height: fit-content;
+        width: 100vw;
+        clip-path: circle(18px at 50% 3.75vh);
+        font-size: 13px;
+        z-index: 1000;
+    }
+    .helptext>div {
+        position: relative;
+        bottom: -7.5px;
+    }
+    .big-container {
+        position: relative;
+        top: -16vh;
+        width: fit-content;
+    }
+    .fa-question {
+        font-size: 15px;
+    }
+    .icon-wrap {
+        margin-right: 50%;
+        margin-left: auto;
+        transform: translate(25%, 20%);
+    }
+    .formwrapper {
+        position: relative;
+        top: -10vh;
+    }
+    .todolist {
+        position: relative;
+        top: -12vh;
+        left: -4vh;
+    }
+    .help:active {
+        clip-path: circle(75%);
+        background-color: rgb(195, 0, 255);
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.16), 0 0.5px 60px rgba(0, 0, 0, 0.23);
+    }
+    .textbox {
+        width: 70%;
+    }
+    .container {
+        padding: 0;
+        margin: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+    }
+    .todo {
+        width: 80vw;
+        height: 6vh;
+        font-size: 20px;
+    }
+    .complete-btn,
+    .delete-btn {
+        height: 6vh;
+        width: 12vw;
+    }
+}
