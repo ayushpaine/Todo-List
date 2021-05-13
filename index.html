@@ -30,7 +30,7 @@
                         >Type in the textbox to enter your task
                     </div>
                     <div>
-                        >Click on the floppy disk to save your task or for mobile users press enter on your keyboard
+                        >Click on the floppy disk to save your task or for mobile and tablet users press enter on your keyboard
                     </div>
                     <div>
                         >Click on the button next to save button to view your different tasks
@@ -62,21 +62,31 @@
             <path d="M1008.28 25.04H974.873V9.20001H1060.41V25.04H1027V110H1008.28V25.04Z" stroke="#FF4AA5" stroke-width="4" mask="url(#path-1-outside-1)"/>
             </svg>
         </div>
-        <div class="formwrapper">
-            <form class="form">
-                <input type="text" class="textbox" name="form-input">
-                <button class="button" type="submit">
-            <i class="far fa-save fa-1x" style="font-size: 140%; color: rgb(88, 112, 112);"></i>
+        <div class="form-master">
+            <div class="formwrapper">
+                <form class="form">
+                    <input type="text" class="textbox" name="form-input">
+                    <button class="button" type="submit">
+            <i class="far fa-save fa-1x" style="font-size: 140%; color: rgb(88, 112, 112);">
+            </i>
         </button>
-                <div class="choose">
-                    <select name="todos" class="choose-todo">
-                <option value="all">All</option>
-                <option value="completed">Completed</option>
-                <option value="left">Left</option>
-                </div>
+                    <div class="choose">
+                        <select name="todos" class="choose-todo">
+                <option value="all">
+                        All
+                </option>
+                <option value="completed">
+                    Completed
+                </option>
+           
+                <option value="left">
+                    Left
+                </option>
+                
             </select>
-                </div>
-            </form>
+                    </div>
+                </form>
+            </div>
         </div>
         <div class="container">
             <ul class="todolist">
