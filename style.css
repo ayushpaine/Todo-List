@@ -316,6 +316,7 @@ select {
     }
     .textbox {
         width: 70%;
+        left: 5px;
     }
     .container {
         padding: 0;
@@ -336,6 +337,7 @@ select {
         width: 12vw;
     }
     .button {
+        position: relative;
         display: none;
     }
 }
