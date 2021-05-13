@@ -335,4 +335,7 @@ select {
         height: 6vh;
         width: 12vw;
     }
+    .button {
+        display: none;
+    }
 }
