@@ -278,9 +278,11 @@ select {
     }
     .help {
         height: fit-content;
+        position: relative;
         width: 100vw;
         clip-path: circle(18px at 50% 3.75vh);
         font-size: 13px;
+        top: -1vh;
         z-index: 1000;
     }
     .helptext>div {
