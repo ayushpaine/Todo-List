@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@600&display=swap");
 html,
 body {
     padding: 0;
@@ -9,7 +9,7 @@ body {
 }
 
 body {
-    font-family: 'Nunito', 'sans-serif';
+    font-family: "Nunito", "sans-serif";
     background-color: rgb(190, 156, 253);
 }
 
@@ -62,7 +62,7 @@ body {
     width: 0%;
     position: relative;
     top: -10vh;
-    animation: formappear 1s cubic-bezier(.7, -0.45, .26, 2.31) forwards 2s;
+    animation: formappear 1s cubic-bezier(0.7, -0.45, 0.26, 2.31) forwards 2s;
     z-index: 1000;
 }
 
@@ -81,7 +81,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-family: 'Nunito', sans-serif;
+    font-family: "Nunito", sans-serif;
 }
 
 .button {
@@ -120,13 +120,21 @@ body {
     left: -5vh;
     top: -13vh;
     color: rgb(73, 73, 73);
+    opacity: 0;
+    animation: todolistanim 0.5s cubic-bezier(0.2, 0.49, 0.61, 1.45) forwards 3s;
+}
+
+@keyframes todolistanim {
+    to {
+        opacity: 1;
+    }
 }
 
 .todo {
     background-color: whitesmoke;
     margin-top: 8px;
     border-radius: 5px;
-    width: 26vw;
+    width: 35vw;
     font-size: 1.2rem;
     position: relative;
     display: flex;
@@ -135,7 +143,7 @@ body {
     align-items: center;
     padding-left: 6px;
     transition: all 0.15s ease-in-out;
-    font-family: 'Nunito', sans-serif;
+    font-family: "Nunito", sans-serif;
 }
 
 .todo li {
@@ -146,8 +154,8 @@ body {
 .delete-btn {
     background-color: rgb(201, 201, 201);
     border: none;
-    height: 3vw;
-    width: 3vw;
+    height: 52px;
+    width: 10%;
     cursor: pointer;
     margin-top: 0;
     margin-bottom: 0;
@@ -179,7 +187,7 @@ body {
 .shrink {
     transform: scale(0);
     opacity: 0;
-    transition: all 0.60s cubic-bezier(0.35, -1.35, 0.3, 1.25);
+    transition: all 0.6s cubic-bezier(0.35, -1.35, 0.3, 1.25);
 }
 
 .circlecont {
@@ -187,7 +195,7 @@ body {
     z-index: -100;
     justify-content: flex-end;
     opacity: 0;
-    animation: helpanim 0.4s cubic-bezier(.62, .49, .61, 1.45) forwards 2.85s;
+    animation: helpanim 0.4s cubic-bezier(0.62, 0.49, 0.61, 1.45) forwards 2.85s;
 }
 
 @keyframes helpanim {
@@ -248,7 +256,7 @@ select {
     padding-right: 0.5vw;
     height: 6vh;
     border-radius: 6px;
-    font-family: 'Nunito', sans-serif;
+    font-family: "Nunito", sans-serif;
     color: rgb(58, 58, 58);
     cursor: pointer;
 }
@@ -350,7 +358,7 @@ select {
     }
 }
 
-@media only screen and (max-width:770px) and (min-width:430px) {
+@media only screen and (max-width: 770px) and (min-width: 430px) {
     .big-container {
         top: -25vh;
     }
