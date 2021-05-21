@@ -121,7 +121,6 @@ body {
     border: none;
     background-color: white;
     position: relative;
-    left: 1em;
     width: 6vh;
     height: 6vh;
     cursor: pointer;
@@ -130,6 +129,8 @@ body {
     transition: all 0s ease;
     opacity: 0;
     top: -0.75vh;
+    padding: 0;
+    margin: 0;
     animation: todolistanim 0.5s cubic-bezier(0.2, 0.49, 0.61, 1.45) forwards 3s;
 }
 
