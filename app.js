@@ -2,13 +2,44 @@ const todoInput = document.querySelector(".textbox");
 const todoButton = document.querySelector(".button");
 const todoList = document.querySelector(".todolist");
 const btn = document.querySelector(".button");
+const mic = document.querySelector(".micbtn");
 const chooseOption = document.querySelector(".choose-todo");
+
+window.SpeechRecognition =
+    window.SpeechRecognition || window.webkitSpeechRecognition;
+
+const recognition = new window.SpeechRecognition();
+recognition.interimResults = true;
+
+recognition.addEventListener("result", (e) => {
+    const voicetxt = Array.from(e.results)
+        .map((result) => result[0])
+        .map((result) => result.transcript)
+        .join("");
+    console.log(voicetxt);
+    todoInput.value = voicetxt;
+});
+let a = 0;
+mic.addEventListener("click", function() {
+    a = a + 1;
+    if (a == 1) {
+        recognition.start();
+    }
+    a = 0;
+});
 
 btn.addEventListener("mousedown", () => {
     btn.style.backgroundColor = "#123466";
 });
 btn.addEventListener("mouseup", () => {
     btn.style.backgroundColor = "#ffffff";
+});
+
+mic.addEventListener("mousedown", () => {
+    mic.style.backgroundColor = "#123466";
+});
+mic.addEventListener("mouseup", () => {
+    mic.style.backgroundColor = "#ffffff";
 });
 
 todoButton.addEventListener("click", addTodo);

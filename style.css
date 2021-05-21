@@ -110,6 +110,29 @@ body {
     top: -25vh;
 }
 
+.mic {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.micbtn {
+    position: relative;
+    border: none;
+    background-color: white;
+    position: relative;
+    left: 1em;
+    width: 6vh;
+    height: 6vh;
+    cursor: pointer;
+    border-radius: 22px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.16), 0 0.5px 60px rgba(0, 0, 0, 0.23);
+    transition: all 0s ease;
+    opacity: 0;
+    top: -0.75vh;
+    animation: todolistanim 0.5s cubic-bezier(0.2, 0.49, 0.61, 1.45) forwards 3s;
+}
+
 .todolist {
     list-style: none;
     position: relative;
@@ -294,6 +317,9 @@ select {
         font-size: 13px;
         top: -1vh;
     }
+    .micbtn {
+        top: -6vh;
+    }
     .icon-wrap {
         position: relative;
         top: 0.5vh;
@@ -385,6 +411,9 @@ select {
     }
     .choose {
         left: 7.5px;
+    }
+    .micbtn {
+        top: 8vh;
     }
     .todo {
         display: flex;
