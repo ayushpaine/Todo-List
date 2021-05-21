@@ -16,7 +16,6 @@ recognition.addEventListener("result", (e) => {
         .map((result) => result[0])
         .map((result) => result.transcript)
         .join("");
-    console.log(voicetxt);
     todoInput.value = voicetxt;
 });
 let a = 0;
